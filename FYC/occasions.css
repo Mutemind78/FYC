@@ -1,0 +1,431 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary: #4CAF50;
+    --primary-dark: #3e8e41;
+    --secondary: #FF4081;
+    --secondary-dark: #e03570;
+    --text: #333;
+    --text-light: #666;
+    --bg: #FFF9F0;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --border: #e0e0e0;
+  }
+  
+  /* ===== HEADER ===== */
+  .header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  
+  .logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .company-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #2E7D32;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effects */
+  .logo-container:hover .logo {
+    transform: scale(1.05);
+  }
+  
+  .logo-container:hover .company-name {
+    color: #FF4081;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    font-weight: 600;
+    color: #2E7D32;
+    padding: 5px 0;
+    position: relative;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: width 0.3s;
+  }
+  
+  .nav-links li a:hover::after,
+  .nav-links li a.active::after {
+    width: 100%;
+  }
+  
+  .cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .cart-count {
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  /* ===== OCCASIONS HERO ===== */
+  .occasions-hero {
+    background: linear-gradient(rgba(0,0,0,0.3)), url('images/bg.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+  }
+  
+  .occasions-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .occasions-hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  /* ===== TABS ===== */
+  .tabs-container {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .tab-btn {
+    padding: 15px 30px;
+    background: transparent;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary);
+    transition: width 0.3s;
+  }
+  
+  .tab-btn.active {
+    color: var(--primary);
+  }
+  
+  .tab-btn.active::after {
+    width: 100%;
+  }
+  
+  /* ===== OCCASION CONTENT ===== */
+  .tab-content {
+    display: none;
+    padding: 40px 0;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .occasion-category {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .occasion-category h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2E7D32;
+  }
+  
+  .occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  .occasion-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .occasion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  .occasion-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .occasion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .occasion-card:hover .occasion-image img {
+    transform: scale(1.05);
+  }
+  
+  .month-badge, .occasion-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .occasion-info {
+    padding: 20px;
+  }
+  
+  .occasion-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2E7D32;
+  }
+  
+  .occasion-info p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  
+  .btn-view {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-view:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer {
+    background-color: #2E7D32;
+    color: var(--white);
+    padding: 50px 0 20px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary);
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: var(--secondary);
+  }
+  
+  .newsletter-form {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .newsletter-form button {
+    padding: 0 20px;
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 992px) {
+    .occasion-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .occasions-hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .tabs {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+    }
+    
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .tab-btn {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .occasions-hero {
+      height: 300px;
+    }
+    
+    .occasions-hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .occasion-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .occasion-image {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .company-name {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .logo-container {
+      gap: 8px;
+    }
+    .logo {
+      height: 40px;
+    }
+    .company-name {
+      font-size: 1rem;
+    }
+  }

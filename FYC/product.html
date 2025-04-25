@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | FruitYard Creations</title>
+  <link rel="stylesheet" href="product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation (Consistent with other pages) -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- In the navbar section (replace existing logo div) -->
+<div class="logo-container">
+  <img src="images/logo.png" alt="FruitYard Creations Logo" class="logo">
+  <span class="company-name">FruitYard Creations</span>
+</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html">Occasions</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html" class="cart-icon">🛒 <span class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Product Details Section -->
+  <main class="product-details">
+    <div class="product-container">
+      <!-- Product Gallery -->
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="images/product-large-1.jpg" alt="Tropical Fruit Bouquet" id="mainImage">
+        </div>
+        <div class="thumbnail-container">
+          <img src="images/product-thumb-1.jpg" alt="Thumbnail 1" class="thumbnail active">
+          <img src="images/product-thumb-2.jpg" alt="Thumbnail 2" class="thumbnail">
+          <img src="images/product-thumb-3.jpg" alt="Thumbnail 3" class="thumbnail">
+          <img src="images/product-thumb-4.jpg" alt="Thumbnail 4" class="thumbnail">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info">
+        <h1>Tropical Fruit Bouquet</h1>
+        <div class="price">$49.99</div>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="review-count">(24 reviews)</span>
+        </div>
+        
+        <div class="description">
+          <p>A vibrant arrangement of fresh tropical fruits including pineapple, mango, kiwi, and starfruit, expertly carved and arranged in a beautiful basket. Perfect for birthdays, anniversaries, or corporate gifts.</p>
+          <ul class="features">
+            <li>Feeds 6-8 people</li>
+            <li>Freshly prepared on delivery day</li>
+            <li>Includes dipping sauces</li>
+            <li>100% organic fruits</li>
+          </ul>
+        </div>
+
+        <div class="customization">
+          <h3>Customize Your Order</h3>
+          <div class="option">
+            <label>Size:</label>
+            <div class="size-options">
+              <button class="size-option active">Medium</button>
+              <button class="size-option">Large (+$10)</button>
+              <button class="size-option">XL (+$20)</button>
+            </div>
+          </div>
+          <div class="option">
+            <label>Add Chocolate Dip:</label>
+            <div class="checkbox-option">
+              <input type="checkbox" id="chocolate-dip">
+              <label for="chocolate-dip">Add dark chocolate dip (+$5)</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-to-cart-section">
+          <div class="quantity">
+            <button class="qty-btn minus">-</button>
+            <input type="number" value="1" min="1" class="qty-input">
+            <button class="qty-btn plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-meta">
+          <div class="meta-item">
+            <span class="meta-label">Category:</span>
+            <span class="meta-value">Bouquets</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">SKU:</span>
+            <span class="meta-value">FY-TROP-2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Delivery:</span>
+            <span class="meta-value">Next day available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <h2>You May Also Like</h2>
+      <div class="related-grid">
+        <!-- Related items will be loaded via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Consistent with other pages) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 FruitYard Creations. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="product.js"></script>
+</body>
+</html>

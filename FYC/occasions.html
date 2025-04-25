@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occasions | FruitYard Creations</title>
+  <link rel="stylesheet" href="occasions.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- In the navbar section (replace existing logo div) -->
+<div class="logo-container">
+  <img src="images/logo.png" alt="FruitYard Creations Logo" class="logo">
+  <span class="company-name">FruitYard Creations</span>
+</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html" class="active">Occasions</a></li>
+        <li><a href="carved.html">Carved Fruits</a></li>
+        <li><a href="garlands.html">Garlands</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html" class="cart-icon">🛒 <span class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="occasions-hero">
+    <h1>Fruit Arrangements for Every Occasion</h1>
+    <p>Celebrate life's special moments with nature's sweetness</p>
+  </section>
+
+  <!-- Occasions Tabs -->
+  <div class="tabs-container">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="seasonal">Seasonal</button>
+      <button class="tab-btn" data-tab="celebrations">Celebrations</button>
+      <button class="tab-btn" data-tab="corporate">Corporate</button>
+    </div>
+  </div>
+
+  <!-- Seasonal Occasions -->
+  <section class="tab-content active" id="seasonal">
+    <div class="occasion-category">
+      <h2>Seasonal Specialties</h2>
+      <div class="occasion-grid">
+        <!-- January -->
+        <div class="occasion-card" data-month="january">
+          <div class="occasion-image">
+            <img src="images/occasion-newyear.jpg" alt="New Year's Arrangement">
+            <div class="month-badge">January</div>
+          </div>
+          <div class="occasion-info">
+            <h3>New Year's Celebration</h3>
+            <p>Start the year fresh with our gold-accented fruit towers</p>
+            <a href="shop.html?occasion=newyear" class="btn-view">View Collection</a>
+          </div>
+        </div>
+        
+        <!-- February -->
+        <div class="occasion-card" data-month="february">
+          <div class="occasion-image">
+            <img src="images/occasion-valentine.jpg" alt="Valentine's Arrangement">
+            <div class="month-badge">February</div>
+          </div>
+          <div class="occasion-info">
+            <h3>Valentine's Day</h3>
+            <p>Heart-shaped fruit bouquets dipped in chocolate</p>
+            <a href="shop.html?occasion=valentine" class="btn-view">View Collection</a>
+          </div>
+        </div>
+        
+        <!-- More months... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrations -->
+  <section class="tab-content" id="celebrations">
+    <div class="occasion-category">
+      <h2>Personal Celebrations</h2>
+      <div class="occasion-grid">
+        <!-- Birthday -->
+        <div class="occasion-card">
+          <div class="occasion-image">
+            <img src="images/occasion-birthday.jpg" alt="Birthday Arrangement">
+            <div class="occasion-badge">Birthday</div>
+          </div>
+          <div class="occasion-info">
+            <h3>Birthday Surprises</h3>
+            <p>Number-shaped fruit platters for all ages</p>
+            <a href="shop.html?occasion=birthday" class="btn-view">View Options</a>
+          </div>
+        </div>
+        
+        <!-- Anniversary -->
+        <div class="occasion-card">
+          <div class="occasion-image">
+            <img src="images/occasion-anniversary.jpg" alt="Anniversary Arrangement">
+            <div class="occasion-badge">Anniversary</div>
+          </div>
+          <div class="occasion-info">
+            <h3>Anniversaries</h3>
+            <p>Elegant fruit arrangements with romantic touches</p>
+            <a href="shop.html?occasion=anniversary" class="btn-view">View Options</a>
+          </div>
+        </div>
+        
+        <!-- More celebrations... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 FruitYard Creations. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="occasions.js"></script>
+</body>
+</html>

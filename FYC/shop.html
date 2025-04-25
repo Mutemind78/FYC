@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | FruitYard Creations</title>
+  <link rel="stylesheet" href="shop.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation (Same as Home) -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- In the navbar section (replace existing logo div) -->
+<div class="logo-container">
+  <img src="images/logo.png" alt="FruitYard Creations Logo" class="logo">
+  <span class="company-name">FruitYard Creations</span>
+</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="product.html">Occasions</a></li>
+        <li><a href="carved.html">Carved Fruits</a></li>
+        <li><a href="garlands.html">Garlands</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html" class="cart-icon">🛒 <span class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Shop Hero -->
+  <section class="shop-hero">
+    <h1>Our Fruit Collections</h1>
+    <p>Fresh, beautiful arrangements for every occasion</p>
+  </section>
+
+  <!-- Product Filters -->
+  <section class="filters">
+    <div class="filter-options">
+      <button class="filter-btn active" data-category="all">All Products</button>
+      <button class="filter-btn" data-category="bouquets">Bouquets</button>
+      <button class="filter-btn" data-category="carved">Carved Fruits</button>
+      <button class="filter-btn" data-category="garlands">Garlands</button>
+      <button class="filter-btn" data-category="chocolate">Chocolate Dipped</button>
+    </div>
+    <div class="sort-options">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="name">Name: A-Z</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <main class="shop-main">
+    <div class="product-grid" id="product-grid">
+      <!-- Products will be loaded via JavaScript -->
+    </div>
+  </main>
+
+  <!-- Footer (Same as Home) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 FruitYard Creations. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>
